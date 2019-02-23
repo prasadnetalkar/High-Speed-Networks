@@ -1,0 +1,20 @@
+circle=[]
+
+n=int(input('Number of elements for a circle'))
+
+for i in range(0,n):
+    circle.append(i)
+    
+print "circle formed" +str(circle)
+
+m=int(input('mth element to be deleted'))
+k=int(input('Remaining number of elements'))
+
+indx=0;
+
+while(len(circle)>k):
+     indx = indx + m
+     indx = (indx)%len(circle)
+     del circle[indx]
+     
+print "number of elements remaining" +str(circle)
